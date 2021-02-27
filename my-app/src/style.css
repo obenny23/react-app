@@ -1,0 +1,213 @@
+/*      Form choices settings        */
+
+.rad-choices input[type="radio"] {
+    cursor: pointer;
+}
+  
+.rad-choices label {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+/*      Table entry settings         */
+
+#tentry{
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+}
+
+#tentry td, #tentry th {
+    
+    border: 1px solid #9c9595;
+    padding: 6px;
+}
+#tentry tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+#tentry tr:hover{
+    background-color: #ddd;
+}
+
+#tentry th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+}
+
+
+/*      Image display setting        */
+
+.row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+
+div.img_disp{
+    padding: 18px;
+    float: center;
+    width: 220px;
+}
+
+div.img_disp img{
+    width: 100%;
+    height: auto;
+}
+
+div.img_disp img:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+
+/*      Video display setting        */
+
+div.vid_disp{
+    margin: 15px;
+    float: center;
+    width: 280px;
+}
+
+div.vid_disp iframe{
+    width: 100%;
+    height: auto;
+}
+
+div.vid_disp iframe:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+
+
+/*      Scroll Up functionality      */
+
+#scrollbtn {
+    background-color: rgb(54, 95, 138);
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    color: whitesmoke;
+    padding: 18px;
+    cursor: pointer;
+    border-radius: 90px;
+    font-size: 14px;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    animation: fadeIn 0.2s;
+    transition: opacity 0.4s;
+}
+
+#scrollbtn:hover {
+    background-color: #555555;
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 0.8;
+    }
+}
+
+
+
+/*      Overlay functionality        */
+
+/* .close{
+    position: absolute;
+    top: auto;
+    color: #f1f1f1;
+} */
+
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+  
+  /* Modal Content (image) */
+
+.mod{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+
+  display: block;
+  width: auto;
+  height: 80%;
+}
+div.modal-content-img img{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+
+    display: block;
+    width: auto;
+    height: 80%;
+}
+
+div.modal-content-vid iframe{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+
+    display: block;
+    width: 75%;
+    height: 75%;
+}
+
+
+  /* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+.error {
+    font-size: small;
+    
+}
