@@ -1,6 +1,5 @@
 import './App.css';
 
-
 import Body from './component/body'
 import TabList from './component/tablist'
 import { useState } from 'react';
@@ -22,6 +21,10 @@ function App() {
   {
     id : 4,
     title : 'Table'
+  },
+
+  { id : 6,
+    title : 'Zoom'
   },
   {
     id : 5,

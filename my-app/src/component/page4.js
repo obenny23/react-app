@@ -6,7 +6,7 @@ function Tabledata(){
     return (
         <div>
             <body>
-                <div>
+                <div className="jaja">
                     <h3>Dishes I Want To Make</h3>
 
                     <table id="tentry">

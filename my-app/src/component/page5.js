@@ -97,37 +97,39 @@ class Login extends React.Component {
       return (
         <div>       
             <body>
-                <h2>Log in with email</h2>
-                <hr></hr> 	
+                <div className="jaja">
+                    <h2>Log in with email</h2>
+                    <hr></hr> 	
 
-                <form name="contactform" className="contactform" onSubmit= {this.contactSubmit.bind(this)}>
-                        <label>&ensp;First Name:&emsp;</label><br/>
+                    <form name="contactform" className="contactform" onSubmit= {this.contactSubmit.bind(this)}>
+                        <label>First Name:&emsp;</label><br/>
                         <input ref="fname" type="text" placeholder="John" onChange={this.handleChange.bind(this, "fname")} value={this.state.fields["fname"]}/>
                         <span className="error">{this.state.errors["fname"]}</span>
                         
                         <br/>
                         
-                        <label>&ensp;Last Name:&emsp;</label><br/>
+                        <label>Last Name:&emsp;</label><br/>
                         <input ref="lname" type="text" placeholder="Doe" onChange={this.handleChange.bind(this, "lname")} value={this.state.fields["lname"]}/>
                         <span className="error">{this.state.errors["lname"]}</span>
                         <br/>
                     
 
                         <br/>
-                        <label for="nemail">&ensp;Email:&nbsp;&emsp;</label>
+                        <label for="nemail">Email:&nbsp;&emsp;</label>
                         <input refs="email" type="text" size="30" onChange={this.handleChange.bind(this, "email")} value={this.state.fields["email"]}/>
                         <span className="error">{this.state.errors["email"]}</span>
 
                         <br/>
-                        <label for="phone">&ensp;Phone:&emsp;</label>
+                        <label for="phone">Phone:&emsp;</label>
                         <input refs="phone" type="text" size="15" onChange={this.handleChange.bind(this, "phone")} value={this.state.fields["phone"]}/>
                         <span className="error">{this.state.errors["phone"]}</span>
                         <br/>
                         
                         <br/>
                         <button className="loginbtn" id="submit" value="Submit">Log In</button>
-                </form>
-          </body>
+                    </form>
+                </div>
+            </body>
         </div>
       )
     }

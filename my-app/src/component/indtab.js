@@ -27,7 +27,7 @@ function Itab (props){
     console.log(props)
 
     return (
-        <div style = {addStyle()} onClick = {props.ctab.bind(this, props.out.id)} > {props.out.title}</div>
+        <div className="tb" style = {addStyle()} onClick = {props.ctab.bind(this, props.out.id)} > {props.out.title}</div>
     );
 }
 
