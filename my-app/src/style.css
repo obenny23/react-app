@@ -124,13 +124,6 @@ div.vid_disp iframe:hover{
 
 /*      Overlay functionality        */
 
-/* .close{
-    position: absolute;
-    top: auto;
-    color: #f1f1f1;
-} */
-
-
 
 .modal {
     display: none; /* Hidden by default */
@@ -147,17 +140,7 @@ div.vid_disp iframe:hover{
   
   /* Modal Content (image) */
 
-.mod{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
 
-  display: block;
-  width: auto;
-  height: 80%;
-}
 div.modal-content-img img{
     position: fixed;
     top: 50%;
@@ -183,40 +166,21 @@ div.modal-content-vid iframe{
 }
 
 
-  /* The Close Button */
-.close {
-    align-self: center;
-    height: auto;
-    width: auto;
-    border: 0px;
-    border-radius: 45px;
-    color: black;
-    background-color: #adadad;
-    font-size: 20px;
-    font-weight: bold;
-    opacity: 0.8;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color:black;
-    background-color: rgb(229, 149, 149);
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-
-
 .error {
     font-size: small;
-    
 }
 
+/*      Zoom Meeting Title & Button      */
+.ZMM {
+    font-size: 2em;
+    width: fit-content;
+    font-weight: bolder;
+}
 .zoom {
     object-position: right;
     font-size: large;
     background-color: rgb(11, 96, 170);
-    opacity: 0.95;
+    opacity: 0.90;
     z-index: 1;
     border: none;
     outline: none;
@@ -226,23 +190,57 @@ div.modal-content-vid iframe{
     border-radius: 5px;
 }
 
-.prompt {
-    size: 20px;
+/*      Task Box Style      */
+.highlighted-entr {
+    size: 30px;
+    left: 20%;
+    right: 20%;
+    background-color: #f6f7f9;
+    border-radius: 10px;
+    width: 95%;
+    margin-left: 2%;
+    margin-right: 2%;
+    box-shadow: -4px 5px #2d8cff; 
 }
 
 .new-entr {
     size: 30px;
     left: 20%;
     right: 20%;
-    background-color: #e0e0e0;
-    border-radius: 15px;
+    background-color: #f6f7f9;
+    border-radius: 10px;
     width: 95%;
     margin-left: 2%;
     margin-right: 2%;
 }
 
+.task {
+    font-weight:bold;
+    letter-spacing: -0.6px;
+    font-size: 20px;
+    color: black;
+    padding-left:10px;
+    padding-top: 10px;
+}
+
+.info{
+    font-size: 16px;
+    color: black;
+    padding-left: 16px;
+}
+
+/*      Who Knows        */
+.frm {
+    border: groove 2px #747487;
+    border-radius: 5px;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 24px;
+}
 .form-cntrl {
-    size: 20px; 
+    font-size: 20px; 
+    font-weight:normal;
 }
 
 .tb {
@@ -251,8 +249,33 @@ div.modal-content-vid iframe{
     padding: 16px;
 }
 
+
+.delete {
+    padding: 20px;
+    float: right;
+    color: red;
+    cursor: pointer;
+}
+
+.btn-update {
+    color: #747487;
+    padding: auto;
+    cursor: pointer;
+    float:right;
+    border-radius: 5mm;
+}
+
+/*      Frame        */
+
 .jaja {
     width: 98%;
     margin-left: 1%;
     margin-right: 1%;
+}
+
+.empty-sched {
+    color:#2d8cff;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
 }

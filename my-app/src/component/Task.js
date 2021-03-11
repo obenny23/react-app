@@ -1,17 +1,15 @@
 
-const Task = ({task, onDelete, onUpdate }) => {
+const Task = ({task, onDelete, onUpdate}) => {
 
     return (
-        <div className="jaja">
-            <div className="new-entr" onDoubleClick={() => onUpdate(task.id)}>
-                <h3>{task.title}
-                    <div style={{color : "red", cursor : 'pointer'}} onClick={() => onDelete(task.id)}>
-                        Delete
-                    </div>
-                </h3>
-                <p>{task.day}</p>
-                    <a href={task.textInfor}>{task.textInfor}</a>
-                {task.important && <p> important </p>}
+        <div>
+            <br/>
+            <div className={task.important ? "highlighted-entr" :"new-entr"}>
+                <p className="task">{task.title}</p>
+                <p className="info">{task.day}</p>
+{/* =                <div className="delete" onClick={() => onDelete(task.id)}>Delete</div>
+                <div className="btn-update" onClick={() => onUpdate(task.id)}>Update</div> */}
+                <a className="info" href={task.textInfor}>{task.textInfor}</a>
             </div> 
         </div>
     )

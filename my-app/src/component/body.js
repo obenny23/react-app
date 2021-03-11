@@ -25,7 +25,7 @@ class Body extends Component {
             else if (activetab === 4){
                 return <Tabledata/>
             }
-            else if (activetab == 6){
+            else if (activetab === 6){
                 return <Zoomdata/>
             }
             else {

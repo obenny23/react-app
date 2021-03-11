@@ -1,13 +1,15 @@
 import React, {useEffect, useState} from 'react';
-import Tasks from './Tasks'
+import Tasks from './Tasks';
 import AddTask from './AddTask';
+import Title from './title';
+import ZoomButton from './zoomButton'
 import '../style.css';
 
-function Zoomdata() {
+const Zoomdata = () => {
     const [tasks, setTasks] = useState([])
 
 
-    useEffect ( () => {
+    useEffect (() => {
         const getTasks = async () => {
             const tasksFromServer = await fetchTasks()
             setTasks(tasksFromServer)
@@ -17,19 +19,19 @@ function Zoomdata() {
     }, [])
 
     const fetchTasks = async () => {
-        const res = await fetch("http://localhost:5000/tasks")
+        const res = await fetch('http://localhost:5000/tasks')
         const data = await res.json()
         return data
     }
 
     const fetchTask = async (id) => {
-        const res = await fetch('http://localhost:5000/tasks/${id}')
+        const res = await fetch(`http://localhost:5000/tasks/${id}`)
         const data = await res.json()
         return data
     }
 
     const deleteTask = async (id) => {
-        const res = await fetch('http://localhost:5000/tasks/${id}',
+        const res = await fetch(`http://localhost:5000/tasks/${id}`,
         {method : 'DELETE'})
         setTasks(tasks.filter((task) => task.id !== id))
     }
@@ -48,21 +50,21 @@ function Zoomdata() {
     }
 
     const updateTask = async (id) => {
-        const taskToToggle = fetchTask(id)
-        const upDTask = { ...taskToToggle, important : !taskToToggle.important}
+        const taskToToggle = await fetchTask(id)
+        const editTask = { ...taskToToggle, title: taskToToggle.title, day: taskToToggle.day, textInfor: taskToToggle.textInfor,  important : !(taskToToggle.important)}
 
-        const res = await fetch('http://localhost:5000/tasks/${id}', {
+        const res = await fetch(`http://localhost:5000/tasks/${id}`, {
             method : 'PUT',
             headers : {
                 'Content-type' :'application/json',
             },
-            body: JSON.stringify(upDTask)
+            body: JSON.stringify(editTask)
         })
         const data = await res.json()
 
         setTasks(
             tasks.map((task) =>
-            task.id === id ? { ...task, important: data.important} : task
+            task.id === id ? { ...task, title: taskToToggle.title, day: taskToToggle.day, textInfor: taskToToggle.textInfor, important: data.important} : task
             )
         )
     }
@@ -71,8 +73,8 @@ function Zoomdata() {
         <div>
             <body> 
                 <div className = "jaja">
-                    <button className="zoom" >Create Meeting</button>
-                        <h1>Zoom Meeting Manager</h1>
+                        <Title/>
+                        <ZoomButton/>
                         <AddTask onAdd={addTask}/>
                         <Tasks tasks={tasks} onDelete={deleteTask} onUpdate={updateTask}/>
                 </div>

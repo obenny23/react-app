@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ScrollToTop from "./ScrollToTop";
 import '../style.css';
 import ImageBox from './imagebox';
@@ -18,20 +18,7 @@ function Imagedata(){
     var img11 = require('./doge/IMG_2226.JPG')
 
 
-    function OpenImg(){
 
-        var modal = document.getElementById("myModal-img");
-        var modalImg = document.getElementById("img01");
-            
-        modalImg.src = './doge/IMG_2124.JPG'
-        modal.style.display = "block";
-    
-        window.onclick = function(event) { 
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    }
     return (
         <div>
             <body>
