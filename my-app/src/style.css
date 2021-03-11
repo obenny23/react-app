@@ -171,13 +171,16 @@ div.modal-content-vid iframe{
 }
 
 /*      Zoom Meeting Title & Button      */
-.ZMM {
-    font-size: 2em;
-    width: fit-content;
+.zmm  p {
+    padding: 2px;
+    margin-left: 8%;
+    font-size: 2.2em;
     font-weight: bolder;
 }
-.zoom {
-    object-position: right;
+
+.zoombtn {
+    width: fit-content;
+    float: right;
     font-size: large;
     background-color: rgb(11, 96, 170);
     opacity: 0.90;
@@ -185,33 +188,40 @@ div.modal-content-vid iframe{
     border: none;
     outline: none;
     color: aliceblue;
-    padding: 18px;
+    padding: 24px;
     cursor: pointer;
     border-radius: 5px;
+    margin-right: 8%;
 }
 
 /*      Task Box Style      */
 .highlighted-entr {
-    size: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 20px;
     left: 20%;
     right: 20%;
     background-color: #f6f7f9;
     border-radius: 10px;
-    width: 95%;
-    margin-left: 2%;
-    margin-right: 2%;
+    width: auto;
+    margin-left: 4%;
+    margin-right: 4%;
     box-shadow: -4px 5px #2d8cff; 
 }
 
 .new-entr {
-    size: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 20px;
     left: 20%;
     right: 20%;
     background-color: #f6f7f9;
     border-radius: 10px;
-    width: 95%;
-    margin-left: 2%;
-    margin-right: 2%;
+    width: auto;
+    margin-left: 4%;
+    margin-right: 4%;
 }
 
 .task {
@@ -219,24 +229,25 @@ div.modal-content-vid iframe{
     letter-spacing: -0.6px;
     font-size: 20px;
     color: black;
-    padding-left:10px;
-    padding-top: 10px;
+    margin-left:2%;
+    margin-top: 2%;
 }
 
 .info{
+    font-weight: lighter;
     font-size: 16px;
     color: black;
-    padding-left: 16px;
+    margin-left: 4%;
+
 }
 
 /*      Who Knows        */
 .frm {
     border: groove 2px #747487;
     border-radius: 5px;
-    margin-top: 2%;
     margin-left: 2%;
     margin-right: 2%;
-    padding: 24px;
+    padding: 4%;
 }
 .form-cntrl {
     font-size: 20px; 
@@ -249,19 +260,26 @@ div.modal-content-vid iframe{
     padding: 16px;
 }
 
-
+/*      Update buttons      */
 .delete {
-    padding: 20px;
+    margin-right: 12px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
     float: right;
     color: red;
     cursor: pointer;
 }
 
 .btn-update {
-    color: #747487;
-    padding: auto;
-    cursor: pointer;
+    margin-top: 16px;
+    margin-right: 12px;
+    font-size: 16px;
+    padding: 5px 5px 5px 5px;
     float:right;
+    color: #747487;
+    cursor: pointer;
     border-radius: 5mm;
 }
 
@@ -278,4 +296,12 @@ div.modal-content-vid iframe{
     text-align: center;
     font-size: x-large;
     font-weight: bold;
+}
+
+.savebtn {
+    background-color: black;
+    color: wheat;
+    text-align: center;
+    width: 80%;
+    border-radius: 5mm;
 }

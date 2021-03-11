@@ -2,7 +2,6 @@ import React from 'react';
 import Task from './Task';
 
 const Tasks = ({tasks, onDelete, onUpdate}) => {
-    console.log(tasks.length)
 
     return(
         tasks.length > 0

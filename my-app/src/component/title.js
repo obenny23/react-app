@@ -1,7 +1,7 @@
 const Title = () => {
     return (
-        <div>
-            <p className="ZMM">Zoom Meeting Manager</p>
+        <div className="zmm">
+            <p>Zoom Meeting Manager</p>
         </div>
     )
 };

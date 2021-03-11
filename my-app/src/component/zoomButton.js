@@ -1,7 +1,7 @@
-const ZoomButton = () => {
+const ZoomButton = ({onCreate}) => {
 
     return(
-        <button className="zoom">Create Meeting</button>
+        <button className="zoombtn" onClick={() => onCreate()}>Create Meeting</button>
     )
 };
 export default ZoomButton;

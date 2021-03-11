@@ -3,11 +3,13 @@ import Tasks from './Tasks';
 import AddTask from './AddTask';
 import Title from './title';
 import ZoomButton from './zoomButton'
+import Display from './display'
 import '../style.css';
 
 const Zoomdata = () => {
     const [tasks, setTasks] = useState([])
 
+    let isNewTask = false;
 
     useEffect (() => {
         const getTasks = async () => {
@@ -69,15 +71,19 @@ const Zoomdata = () => {
         )
     }
 
+    const onCreate = () => {
+        isNewTask = !isNewTask
+    }
+
     return (
         <div>
             <body> 
                 <div className = "jaja">
-                        <Title/>
-                        <ZoomButton/>
-                        <AddTask onAdd={addTask}/>
-                        <Tasks tasks={tasks} onDelete={deleteTask} onUpdate={updateTask}/>
+                    <ZoomButton onCreate={onCreate}/>
+                    <Title />
+                    <Display addTask={AddTask} tasks={tasks} deleteTask={deleteTask} updateTask={updateTask} newTask={isNewTask}/>
                 </div>
+                <br/><br/>
             </body>
         </div>
     )
