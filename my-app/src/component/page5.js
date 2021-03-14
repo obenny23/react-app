@@ -14,37 +14,31 @@ class Login extends React.Component {
     handleValidation(){
       let fields = this.state.fields;
       let errors = {};
-      let formIsValid = true;
   
       //First Name
       if(!fields["fname"]){
-        formIsValid = false;
         errors["fname"] = "  Please fill in";
       }
   
       if(typeof fields["fname"] !== "undefined"){
         if(!fields["fname"].match(/^[a-zA-Z]+$/)){
-          formIsValid = false;
           errors["fname"] = "  Only letters";
         }      	
       }
 
       //Last Name
       if(!fields["lname"]){
-        formIsValid = false;
         errors["lname"] = "  Please fill in";
       }
   
       if(typeof fields["lname"] !== "undefined"){
         if(!fields["lname"].match(/^[a-zA-Z]+$/)){
-          formIsValid = false;
           errors["lname"] = "  Only letters";
         }      	
       }
   
       //Email
       if(!fields["email"]){
-        formIsValid = false;
         errors["email"] = "    Email Required.";
       }
   
@@ -53,7 +47,6 @@ class Login extends React.Component {
         let lastDotPos = fields["email"].lastIndexOf('.');
   
         if (!(lastAtPos < lastDotPos && lastAtPos > 0 && lastDotPos > 2 && (fields["email"].length - lastDotPos) > 2) || fields["email"].replace(/[^@]/g, "").length !== 1) {
-          formIsValid = false;
           errors["email"] = "    Invalid email address.";
         }
         else{
@@ -63,13 +56,11 @@ class Login extends React.Component {
 
       //Phone
       if(!fields["phone"]){
-        formIsValid = false;
         errors["phone"] = "    Phone Number Required";
       }
   
       if(typeof fields["phone"] !== "undefined"){
         if(!(fields["phone"].match(/^[0-9]+$/))){
-          formIsValid = false;
           errors["phone"] = "    Invalid phone number.";
         }
         else{

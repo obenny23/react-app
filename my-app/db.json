@@ -1,6 +1,20 @@
 {
   "tasks": [
     {
+      "id": 1,
+      "important": true,
+      "title": "CS 185 Misha's Office Hour",
+      "day": "2021-03-05T19:00",
+      "textInfor": "https://ucsb.zoom.us/j/86623368970"
+    },
+    {
+      "id": 2,
+      "important": true,
+      "title": "CS 185 Wenda's Office Hour",
+      "day": "2021-03-05T09:00",
+      "textInfor": "https://ucsb.zoom.us/j/8311826784"
+    },
+    {
       "id": 3,
       "important": false,
       "title": "Game Night",
@@ -8,39 +22,11 @@
       "textInfor": "https://ucsb.us/j/8311826784"
     },
     {
-      "title": "new meeting",
-      "day": "2021-02-27T00:30",
-      "textInfor": "https://ucsb.zoom.us/j/8311826784",
-      "important": true,
-      "id": 4
-    },
-    {
-      "title": "hello",
-      "day": "1111-11-11T01:01",
-      "textInfor": "https://yeh.com",
-      "important": false,
-      "id": 6
-    },
-    {
       "title": "New Meeting",
-      "day": "0001-01-01T01:01",
-      "textInfor": "https://yellow.com",
+      "day": "2022-02-27T00:30",
+      "textInfor": "https://ucsb.zoom.us/j/8311826784",
       "important": false,
-      "id": 9
-    },
-    {
-      "title": "10",
-      "day": "1999-10-23T21:09",
-      "textInfor": "https://zoom.com",
-      "important": true,
-      "id": 12
-    },
-    {
-      "title": "hello",
-      "day": "2222-01-01T11:11",
-      "textInfor": "https://zoom.com",
-      "important": false,
-      "id": 13
+      "id": 4
     }
   ]
 }

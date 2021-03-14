@@ -1,16 +1,13 @@
 import React, {useEffect, useState} from 'react';
-import Tasks from './Tasks';
-import AddTask from './AddTask';
 import Title from './title';
 import ZoomButton from './zoomButton'
 import Display from './display'
 import '../style.css';
 
 const Zoomdata = () => {
+    const [isNew, setIsNew] = useState(false)
     const [tasks, setTasks] = useState([])
-
-    let isNewTask = false;
-
+    
     useEffect (() => {
         const getTasks = async () => {
             const tasksFromServer = await fetchTasks()
@@ -26,11 +23,6 @@ const Zoomdata = () => {
         return data
     }
 
-    const fetchTask = async (id) => {
-        const res = await fetch(`http://localhost:5000/tasks/${id}`)
-        const data = await res.json()
-        return data
-    }
 
     const deleteTask = async (id) => {
         const res = await fetch(`http://localhost:5000/tasks/${id}`,
@@ -51,9 +43,8 @@ const Zoomdata = () => {
         setTasks([...tasks, data])
     }
 
-    const updateTask = async (id) => {
-        const taskToToggle = await fetchTask(id)
-        const editTask = { ...taskToToggle, title: taskToToggle.title, day: taskToToggle.day, textInfor: taskToToggle.textInfor,  important : !(taskToToggle.important)}
+    const updateTask = async (id, ntitle, nday, ntextInfor, nImportant) => {
+        const editTask = {title: ntitle, day: nday, textInfor: ntextInfor,  important : nImportant}
 
         const res = await fetch(`http://localhost:5000/tasks/${id}`, {
             method : 'PUT',
@@ -66,24 +57,23 @@ const Zoomdata = () => {
 
         setTasks(
             tasks.map((task) =>
-            task.id === id ? { ...task, title: taskToToggle.title, day: taskToToggle.day, textInfor: taskToToggle.textInfor, important: data.important} : task
+            task.id === id ? { ...task, title: ntitle, day: nday, textInfor: ntextInfor, important: nImportant} : task
             )
         )
     }
 
-    const onCreate = () => {
-        isNewTask = !isNewTask
-    }
+    const onCreate = () => {    setIsNew(!isNew);    }
+
+
 
     return (
         <div>
             <body> 
                 <div className = "jaja">
-                    <ZoomButton onCreate={onCreate}/>
+                    <ZoomButton onCreate={onCreate} isNewTask={isNew}/>
                     <Title />
-                    <Display addTask={AddTask} tasks={tasks} deleteTask={deleteTask} updateTask={updateTask} newTask={isNewTask}/>
+                    <Display onAdd={addTask}  tasks={tasks} onDelete={deleteTask} onUpdate={updateTask} isNewTask={isNew}/>
                 </div>
-                <br/><br/>
             </body>
         </div>
     )

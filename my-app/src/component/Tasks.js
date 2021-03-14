@@ -7,16 +7,17 @@ const Tasks = ({tasks, onDelete, onUpdate}) => {
         tasks.length > 0
         ?
         <div>
-                <div>
-                    {
-                        tasks.map((task) => (<Task key={task.id} task = {task} 
-                        onDelete={onDelete} onUpdate={onUpdate}/>)
-                    )}
-                </div>
-            <br/><br/>
+            <div>
+                {
+                    tasks.map((task) => (<Task key={task.id} task = {task} 
+                    onDelete={onDelete} onUpdate={onUpdate}/>)
+                )}
+            </div>
+            <br/>
         </div>
         :
         <div>
+            <br/><br/><br/><br/><br/>
             <p className="empty-sched" >No available schedules at this moment</p>
         </div>
     )

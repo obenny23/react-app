@@ -1,15 +1,20 @@
 import AddTask from './AddTask'
 import Tasks from './Tasks'
 
-const Display = ({addTask, tasks, deleteTask, updateTask, newTask}) => {
+const Display = ({onAdd, tasks, onDelete, onUpdate, isNewTask}) => {
 
+    
     return (
         <div>
-            {newTask 
+            {isNewTask
                 ? 
-                <AddTask onAdd={addTask}/> 
+                <div>
+                    <br/>
+                    <AddTask onAdd={onAdd}/>
+                    <br/>
+                </div> 
                 :  
-                <Tasks tasks={tasks} onDelete={deleteTask} onUpdate={updateTask}/>
+                <Tasks tasks={tasks} onDelete={onDelete} onUpdate={onUpdate}/>
                 }
         </div>
     )

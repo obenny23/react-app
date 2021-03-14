@@ -1,3 +1,9 @@
+.tb {
+    font-size: large;
+    width: 50px;
+    padding: 16px;
+}
+
 /*      Form choices settings        */
 
 .rad-choices input[type="radio"] {
@@ -170,50 +176,53 @@ div.modal-content-vid iframe{
     font-size: small;
 }
 
+
 /*      Zoom Meeting Title & Button      */
 .zmm  p {
+    letter-spacing: -0.4px;
     padding: 2px;
     margin-left: 8%;
     font-size: 2.2em;
     font-weight: bolder;
 }
-
 .zoombtn {
-    width: fit-content;
+    width: 180px;
+    height: fit-content;
     float: right;
-    font-size: large;
+    font-size: 20px;
+    font-weight: lighter;
+    letter-spacing: 0.6px;
     background-color: rgb(11, 96, 170);
-    opacity: 0.90;
-    z-index: 1;
+    opacity: 0.80;
     border: none;
     outline: none;
-    color: aliceblue;
-    padding: 24px;
+    color: white;
+    padding: 20px 32px;
     cursor: pointer;
     border-radius: 5px;
     margin-right: 8%;
 }
 
+
 /*      Task Box Style      */
-.highlighted-entr {
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 1px;
-    padding-bottom: 20px;
-    left: 20%;
-    right: 20%;
-    background-color: #f6f7f9;
-    border-radius: 10px;
-    width: auto;
-    margin-left: 4%;
-    margin-right: 4%;
-    box-shadow: -4px 5px #2d8cff; 
-}
 
 .new-entr {
     padding-left: 10px;
     padding-right: 10px;
-    padding-top: 1px;
+    padding-bottom: 20px;
+    left: 20%;
+    right: 20%;
+    background-color: #f6f7f9;
+    border : solid 2px;
+    border-color: #e4e4ed;
+    border-radius: 10px;
+    width: auto;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+.highlighted-entr {
+    padding-left: 10px;
+    padding-right: 10px;
     padding-bottom: 20px;
     left: 20%;
     right: 20%;
@@ -222,24 +231,30 @@ div.modal-content-vid iframe{
     width: auto;
     margin-left: 4%;
     margin-right: 4%;
+    border : solid 2px;
+    border-color: #e4e4ed;
+    box-shadow: -4px 5px #2d8cff; 
 }
-
 .task {
     font-weight:bold;
     letter-spacing: -0.6px;
-    font-size: 20px;
+    font-size: 24px;
     color: black;
     margin-left:2%;
     margin-top: 2%;
 }
-
 .info{
     font-weight: lighter;
     font-size: 16px;
     color: black;
     margin-left: 4%;
-
 }
+.url-info {
+    font-weight: lighter;
+    font-size: 16px;
+    margin-left: 4%;
+}
+
 
 /*      Who Knows        */
 .frm {
@@ -247,41 +262,46 @@ div.modal-content-vid iframe{
     border-radius: 5px;
     margin-left: 2%;
     margin-right: 2%;
-    padding: 4%;
+    padding: 28px 4%;
 }
 .form-cntrl {
     font-size: 20px; 
     font-weight:normal;
 }
 
-.tb {
-    font-size: large;
-    width: 50px;
-    padding: 16px;
+.edit-frm {
+    border: groove 2px #747487;
+    border-radius: 5px;
+    margin-left: 8%;
+    margin-right: 8%;
+    padding: 3%;
 }
 
-/*      Update buttons      */
-.delete {
-    margin-right: 12px;
-    margin-bottom: 16px;
-    font-size: 16px;
-    text-align: center;
-    padding: 5px 5px 5px 5px;
-    float: right;
-    color: red;
-    cursor: pointer;
-}
+/*      Update & delete buttons      */
 
 .btn-update {
-    margin-top: 16px;
+    margin-top: 20px;
     margin-right: 12px;
-    font-size: 16px;
+    font-size: 20px;
     padding: 5px 5px 5px 5px;
     float:right;
     color: #747487;
     cursor: pointer;
     border-radius: 5mm;
 }
+
+.delete {
+    margin-top: 20px;
+    margin-right: 16px;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+    float: right;
+    color: red;
+    cursor: pointer;
+    border-radius: 5mm;
+}
+
 
 /*      Frame        */
 
@@ -298,10 +318,38 @@ div.modal-content-vid iframe{
     font-weight: bold;
 }
 
-.savebtn {
-    background-color: black;
-    color: wheat;
-    text-align: center;
-    width: 80%;
-    border-radius: 5mm;
+.save-btn {
+    font-size:16px;
+    padding-top: 12px;
+    padding-bottom : 12px;
+    color : white;
+    width : 90%;
+    margin-left : 5%;
+    margin-right : 5%;
+    text-align : center;
+    background-color : black;
+    border : none;
+    border-radius: 5px;
+    letter-spacing : 0.6px;
+    justify-content : center;
+}
+
+.upd-btn {
+    font-size:16px;
+    padding-top: 12px;
+    padding-bottom : 12px;
+    color : white;
+    width : 84%;
+    margin-left : 8%;
+    margin-right : 8%;
+    text-align : center;
+    background-color : black;
+    border : none;
+    border-radius: 5px;
+    letter-spacing : 0.6px;
+    justify-content : center;
+}
+
+.space {
+    margin-bottom: 0.8em;
 }
